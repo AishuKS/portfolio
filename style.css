@@ -1,0 +1,643 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #080808;
+    color: #fff
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    position: relative; /* Ensure positioning context for absolute positioning */
+    background-color: black; /* Set the background color to black */
+}
+
+#header::before {
+    content: "";
+    position: absolute;
+    top: 55%;
+    right: 25%; /* Position the circle to the right */
+    transform: translate(50%, -50%); /* Center the circle vertically and shift horizontally */
+    width: 500px; /* Adjust size of the circle */
+    height: 500px; /* Adjust size of the circle */
+    border-radius: 50%; /* Create a circular shape */
+    background-image: url(images/img-copy.jpg); /* Set the background image */
+    background-size: cover;
+    background-position: center;
+    z-index: 1; /* Ensure circle appears above background */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Optional: Add shadow for depth */
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 140px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #008080;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 10%;
+    font-size: 30px;
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span{
+    color: #008080;
+}
+
+/* ----------------typescript code----------------------------- */
+.typewriter {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #888;
+    display: inline-block;
+}
+
+.cursor {
+    display: inline-block;
+    animation: blink 0.7s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.download-cv-btn {
+    position: absolute;  /* Position relative to the nearest positioned ancestor */
+    left: 10%;           /* Adjust the percentage to move the button to the left */
+    top: 68%;            /* Adjust vertical position, for example 20% from the top */
+    background-color: #008080; /* Teal color */
+    padding: 14px 40px;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.download-cv-btn:hover {
+    background-color: #339999; /* Lighter teal on hover */
+}
+
+.hello-text {
+    color: cyan; /* Replace 'cyan' with any color you'd like */
+}
+
+
+
+/* --------------about------------------ */
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-title{
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+
+}
+
+.about-col-2 p {
+    line-height: 1.6; /* Add more space between lines */
+    margin-bottom: 15px; /* Add space below the paragraph */
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right:50px ;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #008080;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 200px 1fr; /* Fixed width for label and flexible space for skills */
+    font-size: 16px; /* Font size for both label and skills */
+    align-items: center; /* Vertically align the content */
+    column-gap: 30px; /* Add a consistent gap between the columns */
+}
+
+.tab-contents ul li span {
+    color: #008080;
+    font-size: 16px; /* Ensure font-size is set to 16px */
+    font-weight: 600;
+    /* You can also add padding to the label if needed for more space */
+}
+
+.tab-contents ul li .skills {
+    padding-left: 10px; /* Space between label and skills */
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* Specific styles for experience section */
+#experience ul li {
+    margin-bottom: 20px; /* Space between each experience entry */
+}
+
+
+/* Company name style (red and bold) */
+.company-name {
+    color: #008080; /* Red color for the company name */
+    font-weight: bold; /* Bold for company name */
+    white-space: nowrap; /* Prevents the name from wrapping */
+}
+
+/* Role name style (dark gray and italic) */
+.role-name {
+    font-style: italic; /* Italic for role name */
+    color: #999; /* Dark gray color for role name */
+}
+
+/* Date range style (light gray) */
+.dates {
+    color: #ababab; /* Light gray color for dates */
+    white-space: nowrap; /* Prevents the date from wrapping */
+}
+
+/* Add space between the lines in the education section */
+#education ul li {
+    margin-bottom: 20px; /* Space between each education entry */
+}
+
+#education .company-name {
+    display: block;
+    margin-bottom: 10px; /* Space between institution name and degree */
+}
+
+#education .role-name {
+    display: block;
+    margin-bottom: 5px; /* Space between degree and dates */
+    white-space: nowrap;
+}
+
+#education .dates {
+    color: #ababab;
+    white-space: nowrap; /* Prevent date from wrapping */
+}
+
+/* ---------------services------------------------ */
+#services{
+    padding: 30px 0;
+}
+
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.services-list div:hover{
+    background: #008080;
+    transform: translateY(-10px);
+}
+
+/* --------------projects---------------- */
+
+#projects{
+    padding: 50px 0;
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Ensures the image fills the container and maintains aspect ratio */
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a{
+    margin-top: 20px;
+    color: #008080;;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 60%;
+    text-align: center;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #008080;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.btn:hover{
+    background: #008080;
+}
+
+/* ---------------certificates------------- */
+#certificates .certification-list {
+    display: flex; /* Aligns the items horizontally */
+    gap: 15px; /* Adjusts the gap between the images */
+}
+
+#certificates .certification-list div {
+    flex: 0 1 auto; /* Prevents the images from stretching */
+}
+
+#certificates .certification-list div img {
+    width: 200px; /* Increases the size of the images */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes any unwanted space below the image */
+}
+
+/* New CSS for the sentence */
+#certificates .certificate-text {
+    margin-bottom: 15px; /* Adds some space below the sentence */
+    font-size: 18px; /* Adjusts the font size of the sentence */
+    text-align: left; /* Centers the sentence */
+    line-height: 1.5; /* Adjusts the space between each line */
+}
+
+#certificates {
+    margin-bottom: 30px; /* Adds space at the bottom of the section */
+}
+
+
+
+
+/* -------------contact--------------- */
+
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px ;
+}
+
+.contact-left p i{
+    color: #008080;;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover{
+    color: #008080;;
+    transform: translateY(-5px);
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: #008080;;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.email-link {
+    text-decoration: none; /* Removes underline */
+    color: #ababab; /* Matches the design */
+    font-size: 18px; /* Adjust size */
+    display: flex; /* Aligns icon and text properly */
+    align-items: center; /* Centers them */
+    gap: 10px; /* Space between icon and text */
+    transition: color 0.3s;
+}
+
+.email-link:hover {
+    color: #008080; /* Changes color on hover */
+}
+
+
+/* ------------css for small screens--------------- */
+nav .fas{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    /* #header{
+        background-image: url(images/phone-background.png);
+    } */
+    /* .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    } */
+
+    #header {
+        height: auto; /* Adjust height dynamically */
+        text-align: center; /* Center align text */
+        padding-bottom: 50px;
+    }
+
+    .header-text {
+        margin-top: 60%; /* Reduce margin for better spacing */
+        font-size: 16px;
+        padding: 0 10px; /* Add padding for better readability */
+    }
+
+    .header-text h1 {
+        font-size: 28px; /* Slightly reduce size */
+    }
+
+    #header::before {
+        width: 200px; /* Reduce profile image size */
+        height: 200px;
+        top: 15%; /* Adjust position */
+        right: 50%;
+        transform: translate(50%, 0%);
+    }
+
+    .typewriter {
+        display: block; /* Ensure it takes full width */
+        margin-bottom: 15px; /* Space below typewriter effect */
+    }
+
+    .download-cv-btn {
+        position: static;
+        display: inline-block;
+        margin-top: 20px;
+
+    }
+
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #008080;;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
+
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
