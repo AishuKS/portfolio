@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aishwarya Kandasamy Portfolio</title>
+    <link rel="icon" href="images/initial.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/initial.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <!-- <li><a href="#services">Portfolio</a></li> -->
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1 class="hello-text">Hello, I'm</h1>
+                <h1>Aishwarya Kandasamy</h1>
+                <div class="typewriter"></div>
+                <a href="images/aishwarya_kandasamy_resume.pdf" download class="download-cv-btn">Download CV</a>
+            </div>
+        </div>
+    </div>
+<!-- ---------------about-------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about-picture.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>A creative and enthusiastic Software Engineer who loves to bring ideas to life. I thrive on building 
+                        solutions that are not just functional but impactful. With over 3 years of experience in the industry, 
+                        I've embraced every challenge, whether it’s designing intuitive interfaces, architecting seamless backend 
+                        systems, optimizing performance for scalability and efficiency, or designing and optimizing data 
+                        pipelines for actionable insights.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
+                        <p class="tab-links" onclick="opentab('education',event)">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                        <li><span>Programming Languages:</span> Python, JavaScript, Java, C++, SQL, HTML, CSS</li>
+                        <li><span>Databases:</span>PostgreSQL, MySQL, MongoDB, Cassandra, Snowflake, Redshift, NoSQL</li>
+                        <li><span>Web Technologies:</span>Node.js, React, HTML, CSS</li>
+                        <li><span>Cloud Technologies:</span>AWS (S3, EC2, Lambda, Glue, Redshift, Quicksight), CloudFormation, Terraform</li>
+                        <li><span>Big Data Technologies:</span>Hadoop, Spark, Kafka, Airflow, Snowflake, Redshift, Data Lakes, Data Warehouses</li>
+                        <li><span>DevOps & CI/CD:</span>Docker, Kubernetes, Jenkins, Terraform, Git, GitLab, GitHub, AWS CodePipeline</li>
+                        <li><span>Monitoring & Logging:</span>Prometheus, Grafana, Kibana, AWS CloudWatch</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span class="company-name">Athenahealth</span><br><p class="role-name">Software Engineer</p><br><p class="dates">October 2020 – July 2022</p></li>
+                            <li><span class="company-name">Athenahealth</span><br><p class="role-name">Software Engineer Intern</p><br><p class="dates">January 2020 – September 2020</p></li>
+                        </ul>
+                    </div>                                                    
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>
+                                <span class="company-name">Illinois Institute of Technology</span><br>
+                                <p class="role-name">Masters in Data Science</p><br>
+                                <p class="dates">August 2023 – April 2025</p>
+                            </li>
+                            <li>
+                                <span class="company-name">Velammal Engineering College</span><br>
+                                <p class="role-name">Bachelor of Engineering in Computer Science</p><br>
+                                <p class="dates">June 2016 – April 2020</p>
+                            </li>
+                        </ul>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ------------projects--------------- -->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/expensetracker.jpg">
+                <div class="layer">
+                    <h3>Expense Tracker</h3>
+                    <p>Full-stack Expense Tracker app built with React.js, Node.js, and MongoDB to track income/expenses 
+                        and visualize transactions.</p>
+                        <a href="https://github.com/AishuKS/expense-tracker" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/kakfainstagram.jpg">
+                <div class="layer">
+                    <h3>Kafka Instagram Engagement Tracker</h3>
+                    <p>Kafka-based real-time data pipeline processing Instagram 
+                        engagement data, storing it in AWS S3, and enabling analysis with AWS Glue and Athena.</p>
+                        <a href="https://github.com/AishuKS/kafka-instagram-engagement-pipeline" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/multilabel.jpg">
+                <div class="layer">
+                    <h3>Multi-Label Predictions on Academic Articles</h3>
+                    <p>Multi-label classification of academic articles into six research domains using various NLP models, including BERT, 
+                        Neural Networks, and the Rakel Algorithm for improved knowledge retrieval.</p>
+                        <a href="https://github.com/AishuKS/multilabel-predictions-on-academic-articles" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/heartanalysis.jpg">
+                <div class="layer">
+                    <h3>Heart Attack Risk Prediction</h3>
+                    <p>Machine learning model predicting heart attack risk based on health factors like age, cholesterol, and lifestyle, 
+                        using algorithms such as Logistic Regression, SVM, and Random Forest</p>
+                        <a href="https://github.com/AishuKS/heart-attack-risk-prediction" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/cricketprediction.jpg">
+                <div class="layer">
+                    <h3>Predictions for the 2023 ICC Cricket World Cup</h3>
+                    <p>Prediction of the 2023 ICC Cricket World Cup winner based on historical and contemporary cricket performance data.</p>
+                        <a href="https://github.com/AishuKS/Cricket-World-Cup-Prediction" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/pandascalendar.jpg">
+                <div class="layer">
+                    <h3>Pandas Market Calendar</h3>
+                    <p>Offers comprehensive market calendars with trading sessions, holidays, and break times for global exchanges.</p>
+                        <a href="https://github.com/AishuKS/pandas_market_calendars" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/AishuKS" target="_blank" class="btn">See More</a>
+    </div>
+ </div>
+
+ <!-- ----------certificates---------------- -->
+ <div id="certificates">
+    <div class="container">
+        <h1 class="sub-title">Certificates</h1>
+        <!-- Add the sentence here -->
+        <p class="certificate-text">Just like a cup of hot chocolate on a chilly day, earning certifications adds that perfect warmth to 
+            my professional journey. I’m always sipping on knowledge—whether it’s cloud certifications or expanding 
+            my tech skills, because who says tech enthusiasts can’t enjoy a little sweetness along the way? 😉</p>
+        <div class="certification-list">
+            <!-- First Certification -->
+            <div>
+                <img src="images/aws-solution-architect.png" alt="AWS Certified Badge" />
+            </div>
+            <!-- Second Certification -->
+            <div>
+                <img src="images/aws-data-engineer.png" alt="AWS Data Engineer Badge" />
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ----------services---------------- -->
+<!-- <div id="services">
+    <div class="container">
+        <h1 class="sub-title">I capture my ideas in writing.</h1>
+        <div class="services-list">
+            <div class="service-box">
+                <div class="service-content">
+                    <h2>SVM Deep Dive</h2>
+                    <p>Explored the theory and applications of Support Vector Machines 
+                        (SVM) with a practical Python implementation for classification tasks.</p>
+                    <a href="https://medium.com/@15aish1998/svm-deep-dive-exploring-the-depths-of-support-vector-machines-f9c01bfaeb24" 
+                        class="arrow-link" target="_blank">
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+                <img src="images/svm.jpg" alt="SVM Article" class="service-img">
+            </div>
+            <div class="service-box">
+                <div class="service-content">
+                    <h2>Cloud Development</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna 
+                        aliqua.</p>
+                    <a href="#" class="arrow-link">
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+                <img src="cloud-development.jpg" alt="Cloud Development" class="service-img">
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+ <!-- -----------contact--------------- -->
+  <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>
+                    <a href="mailto:15aish98@gmail.com" class="email-link">
+                        <i class="fa-solid fa-envelope"></i> 15aish98@gmail.com
+                    </a>
+                </p>                             
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/aishwaryakandasamy/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/AishuKS" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="http://medium.com/@15aish1998" target="_blank"><i class="fa-brands fa-medium"></i></i></a>
+                </div>
+                <a href="images/aishwarya_kandasamy_resume.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your name" required>
+                    <input type="email" name="Email" placeholder="Your email" required>
+                    <textarea name="Message" row="6" placeholder="Your message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright &copy; <span id="year"></span> Aishwarya.</p>
+    </div>
+  </div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname, event) {
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        // Remove active class from all tab links
+        for (let i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active-link");
+        }
+    
+        // Remove active class from all tab contents
+        for (let i = 0; i < tabcontents.length; i++) {
+            tabcontents[i].classList.remove("active-tab");
+        }
+    
+        // Add active class to the clicked tab link
+        event.currentTarget.classList.add("active-link");
+    
+        // Show the corresponding tab content
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwJp9amFqooN-qXS648m6Kcdvg73NThDpEo8dBV36drBtA_Mq923diaWaJkT4ZuHLLgng/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg");
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+    // Get the current year dynamically
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
