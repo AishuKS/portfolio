@@ -252,12 +252,28 @@ nav ul li a:hover::after{
 .role-name {
     font-style: italic; /* Italic for role name */
     color: #999; /* Dark gray color for role name */
+    margin-bottom: 2px;
 }
 
 /* Date range style (light gray) */
 .dates {
     color: #ababab; /* Light gray color for dates */
     white-space: nowrap; /* Prevents the date from wrapping */
+    margin-top: -15px;
+}
+
+.college-name {
+    color: #008080; /* Red color for the company name */
+    font-weight: bold; /* Bold for company name */
+    white-space: nowrap; /* Prevents the name from wrapping */
+}
+
+/* Role name style (dark gray and italic) */
+.degree-name {
+    font-style: italic; /* Italic for role name */
+    color: #999; /* Dark gray color for role name */
+    margin-bottom: 2px;
+    white-space: nowrap;
 }
 
 /* Add space between the lines in the education section */
@@ -357,7 +373,7 @@ nav ul li a:hover::after{
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    background: linear-gradient(rgba(0,0,0,0.6), #008080);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -640,7 +656,7 @@ nav .fas{
 }
 
 #msg{
-    color: #61b752;
+    color: #008080;
     margin-top: -40px;
     display: block;
 }
