@@ -3,7 +3,7 @@ const typewriterElement = document.querySelector(".typewriter");
 // List of texts with actual Unicode characters in <span> tags
 const textArray = [
     "⚲  United States of America",
-    "Master's in Data Science",
+    "Master's in Computer Science & Data Science",
     "Software Developer",
     "Data Engineer & Cloud Enthusiast",
     "Full-Stack Engineering",
